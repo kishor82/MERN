@@ -9,6 +9,8 @@ import {
   Label,
   Input
 } from "reactstrap";
+import { EuiButton, EuiFlexGroup, EuiFlexItem } from "@elastic/eui";
+
 import { connect } from "react-redux";
 import { addItem } from "../actions/itemActions";
 
@@ -71,6 +73,13 @@ export class ItemModel extends Component {
                   Add Item
                 </Button>
               </FormGroup>
+              <EuiFlexGroup gutterSize="s" alignItems="center">
+                <EuiFlexItem grow={false}>
+                  <EuiButton onClick={() => window.alert("Button clicked")}>
+                    Primary
+                  </EuiButton>
+                </EuiFlexItem>
+              </EuiFlexGroup>
             </Form>
           </ModalBody>
         </Modal>
